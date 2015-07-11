@@ -1,5 +1,3 @@
-setwd("/Users/yellowcc/Dropbox/source/ExploratoryDataAnalysis/project1")
-
 df <- read.csv("household_power_consumption.txt", header = TRUE, sep = ";")
 
 df$Global_active_power <- gsub("?", NA, df$Global_active_power, fixed = TRUE)
