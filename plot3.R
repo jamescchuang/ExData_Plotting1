@@ -20,7 +20,7 @@ plot3 <- df[df$Date == "2007-02-01" | df$Date == "2007-02-02",]
 
 plot3 <- transform(plot3, timestamp = as.POSIXct(paste(Date, Time)), "%d/%m/%Y %H:%M:%S")
 
-plot(plot3$timestamp, plot3$Sub_metering_1, type = "l", xlab = "", ylab = "Enger sub metering")
+plot(plot3$timestamp, plot3$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(plot3$timestamp, plot3$Sub_metering_2, type = "l", col = "red")
 lines(plot3$timestamp, plot3$Sub_metering_3, type = "l", col = "blue")
 legend("topright", col = c("black", "red", "blue"), c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = c(1,1), lwd = c(1,1))
